@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "type": "module",
+  "name": "mypackage",
+  "version": "1.0.0",
+  "description": "My lesson package",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
