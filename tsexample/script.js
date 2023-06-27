@@ -18,11 +18,9 @@
 // for (const elem of anotherArray) {
 //     console.log(elem);
 // }
-var Color;
-(function (Color) {
-    Color[Color["Red"] = 0] = "Red";
-    Color[Color["Green"] = 1] = "Green";
-    Color[Color["Blue"] = 2] = "Blue";
-})(Color || (Color = {}));
-var light = Color.Red;
-console.log(light);
+// enum Color {Red, Green, Blue}
+// let light: Color = Color.Red;
+// console.log(light);
+var badVar = 123;
+console.log(badVar.length);
+console.log(badVar.length);

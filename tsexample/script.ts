@@ -34,8 +34,18 @@
 // }
 
 
-enum Color {Red, Green, Blue}
+// enum Color {Red, Green, Blue}
 
-let light: Color = Color.Red;
+// let light: Color = Color.Red;
 
-console.log(light);
+// console.log(light);
+
+// let badVar: any = 123;
+
+// console.log(
+//     (<string> badVar).length
+// );
+
+// console.log(
+//     (badVar as string).length
+// );
