@@ -1,51 +1,42 @@
-// function increment(x: number): number {
-//     return x + 1;
+// const myLog: (string) => void =
+//     (message: string) => console.log(message);
+
+// myLog("Hello");
+
+// const complexResponse: () => [string, number] =
+//     () => ["Ivan", 34];
+
+// console.log(complexResponse());
+
+// Inline iterface
+// function printLabel(labelledObj: { label: string }) {
+//     console.log(labelledObj.label);
 // }
 
-// let variable: string = "Hello!";
+// let myObj = { size: 10, label: "Size 10 Object" };
+// printLabel(myObj);
 
 
-// console.log(increment(variable));
-
-// let isGood = true;
-// isGood = "good";
-
-// console.log(`TypeScript is ${isGood}`);
-
-
-// let flag: boolean = false;
-
-// let length: number = 6;
-
-// let name: string = "Ivan";
-
-// console.log(`${flag} ${length} ${name}`);
-
-
-// let someArray: number[] = [1, 2, 3];
-// let anotherArray: Array<number> = [1, 2, 3];
-
-// for (let i: number = 0; i < someArray.length; i++) {
-//     console.log(someArray[i]);
+// Iterface
+// interface LabelledValue {
+//     label: string;
 // }
 
-// for (const elem of anotherArray) {
-//     console.log(elem);
+// function printLabel(labelledObj: LabelledValue) {
+//     console.log(labelledObj.label);
 // }
 
+// let myObj = { size: 10, label: "Size 10 Object" };
+// printLabel(myObj);
 
-// enum Color {Red, Green, Blue}
+// interface Square {
+//     width: number;
+// }
 
-// let light: Color = Color.Red;
+// const calcSquareArea = (sq: Square) => { 
+//     return sq.width * sq.width; 
+// }
 
-// console.log(light);
+// let square = { width: 5 };
 
-// let badVar: any = 123;
-
-// console.log(
-//     (<string> badVar).length
-// );
-
-// console.log(
-//     (badVar as string).length
-// );
+// console.log(calcSquareArea(square));
