@@ -1,35 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import DayWeatherComponent from './weather_components/DayWeatherComponent';
+import MoreDayWeatherListComponent from './weather_components/MoreDayWeatherListComponent';
+import MinDayWeatherListComponent from './weather_components/MinDayWeatherListComponent';
+import OtherCitiesWeatherComponent from './weather_components/OtherCitiesWeatherComponent';
+import CityChoiceComponent from './weather_components/CityChoiceComponent';
 
 import React from 'react';
 
 // Макет проекта в файле ../public/weather_project_on_React.png
 
-// Компонент для основной информации о погоде на день
-const DayWatherComponent = () => (<></>);
-
-// Компонент для расширенной информации о погоде на день
-const MoreDayWatherComponent = () => (<></>);
-
-// Компонент для списка расширенной информации о погоде на несколько дней
-const MoreDayWatherListComponent = () => (<></>);
-
-// Компонент для минимальной информации о погоде на день
-const MinDayWatherComponent = () => (<></>);
-
-// Компонент для списка минимальной информации о погоде на несколько дней
-const MinDayWatherListComponent = () => (<></>);
-
-// Компонент для отображения погоды в других нескольких городах
-const OtherCityWeatherComponent = () => (<></>);
-
-// Компонент для выбора города для отображения погоды
-const CityChoiceComponent = () => (<></>);
-
 
 function App() {
   return (
     <div className="App">
+      <CityChoiceComponent />
+      <div className="main_weather_info">
+        <DayWeatherComponent />
+        <OtherCitiesWeatherComponent />
+      </div>
+      <MinDayWeatherListComponent />
+      <MoreDayWeatherListComponent />
     </div>
   );
 }

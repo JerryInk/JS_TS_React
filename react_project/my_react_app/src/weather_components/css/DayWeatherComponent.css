@@ -1,0 +1,38 @@
+.day_weather {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    flex: auto;
+    height: 300px;
+    width: auto;
+    min-height: 200px;
+    min-width: 150px;
+    max-height: 300px;
+    max-width: 300px;
+    font-size: 14px;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    font-family: Helvetica, sans-serif;
+    background-color: #ccc;
+    border-radius: 12px;
+}
+
+.day_weather_header {
+    display: block;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.day_weather_main {
+    display: block;
+    font-size: 54px;
+    margin-bottom: 15px;
+}
+
+.day_weather_additional {
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    margin-bottom: 15px;
+}

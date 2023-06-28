@@ -1,0 +1,13 @@
+.min_day_weather_list {
+    display: block;
+    margin: 5px 20px;
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    overflow: hidden;
+}
+
+.min_day_weather_ul {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+}

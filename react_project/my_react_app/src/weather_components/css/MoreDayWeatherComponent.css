@@ -1,0 +1,31 @@
+.more_day_weather_li {
+    display: block;
+}
+
+.more_day_weather_item {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    flex: auto;
+    flex-wrap: wrap;
+    height: 250px;
+    width: auto;
+    min-width: 300px;
+    max-width: 1000px;
+    font-size: 14px;
+    color: white;
+    padding: 10px;
+    margin: 5px 10px;
+    font-family: Helvetica, sans-serif;
+    background-color: #ccc;
+    border-radius: 5px;
+}
+
+.more_day_weather_item_date {
+    display: block;
+    font-size: 28px;
+}
+
+.more_day_weather_item_daytime {
+    display: block;
+}

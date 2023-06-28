@@ -1,0 +1,10 @@
+.more_day_weather_list {
+    display: block;
+    margin: 5px 25px;
+}
+
+.more_day_weather_ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}

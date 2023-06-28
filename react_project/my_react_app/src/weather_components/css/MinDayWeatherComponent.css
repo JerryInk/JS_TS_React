@@ -1,0 +1,36 @@
+.min_day_weather_li {
+    display: block;
+}
+
+.min_day_weather_item {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    flex: auto;
+    flex-wrap: wrap;
+    height: 180px;
+    width: 100px;
+    font-size: 14px;
+    color: white;
+    padding: 10px;
+    margin: 5px 10px;
+    font-family: Helvetica, sans-serif;
+    background-color: #ccc;
+    border-radius: 5px;
+}
+
+.min_day_weather_item_weekday {
+    display: block;
+}
+
+.min_day_weather_item_date {
+    display: block;
+}
+
+.min_day_weather_item_max_temp {
+    display: block;
+}
+
+.min_day_weather_item_min_temp {
+    display: block;
+}
