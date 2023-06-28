@@ -1,33 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
-
 import React from 'react';
+import Header from './Header';
 
 
-const SelfComponent = ({lname}) => (
-  <> {lname} </>
-);
-
-class HelloMessage extends React.Component {
-  render() {
-    return (
-      <div>
-        Hello, {this.props.name} 
-        <SelfComponent lname="Kardashin" />
-      </div>
-    );
-  }
+const user = {
+    username: "Gradei",
+    email: "gradei@yandex.ru",
 }
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <HelloMessage name="Aleksey" />
-      </header>
+const App = () => (
+    <div className={'app'}>
+        <Header {...user}/>
     </div>
-  );
-}
+);
 
 export default App;
