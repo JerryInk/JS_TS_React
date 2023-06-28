@@ -1,0 +1,7 @@
+.header {
+    display: inline-block;
+    border: 2px solid rgb(128, 128, 128);
+    border-radius: 3px;
+    padding: 5px;
+    margin: 5px;
+}

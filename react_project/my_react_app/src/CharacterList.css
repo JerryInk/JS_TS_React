@@ -1,0 +1,10 @@
+.character_list {
+    display: block;
+    margin: 5px 20px;
+    overflow: hidden;
+}
+
+.character_ul {
+    display: block;
+    padding: 0;
+}
