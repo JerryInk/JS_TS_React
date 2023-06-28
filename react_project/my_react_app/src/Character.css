@@ -1,0 +1,16 @@
+.charcter_item {
+    display: block;
+    margin: 15px 0;
+}
+
+.character_item_name {
+    display: block;
+}
+
+.character_item_status {
+    display: block;
+}
+
+.character_item_species {
+    display: block;
+}
