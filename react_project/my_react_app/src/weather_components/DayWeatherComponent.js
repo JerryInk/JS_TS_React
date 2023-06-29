@@ -10,7 +10,7 @@ const DayWeatherComponent = (props) => (
                 {item.weather.location.name}
             </div>
             <div className={'day_weather_updated'}>
-                Updated: {new Date(item.weather.current.last_updated).toLocaleTimeString()};
+                Updated: {new Date(item.weather.current.last_updated).toLocaleTimeString()}
             </div>
             <div className={'day_weather_main'}>
                 {item.weather.current.temp_c}&deg;
