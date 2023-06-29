@@ -2,21 +2,43 @@ import './App.css';
 import DayWeatherComponent from './weather_components/DayWeatherComponent';
 import MoreDayWeatherListComponent from './weather_components/MoreDayWeatherListComponent';
 import MinDayWeatherListComponent from './weather_components/MinDayWeatherListComponent';
-import OtherCitiesWeatherComponent from './weather_components/OtherCitiesWeatherComponent';
 import CityChoiceComponent from './weather_components/CityChoiceComponent';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
-// Макет проекта в файле ../public/weather_project_on_React.png
 
+const App = () => {
+  //const [city, setCity] = useState('');
+  const [currentWeather, setCurrentWeather] = useState([]);
+  //const [daysWeather, setDaysWeather] = useState([]);
 
-function App() {
+  
+  useEffect(() => {
+    const getCityWeather = async () => {
+      const response = await axios.get(`http://api.weatherapi.com/v1/current.json?key=2ee9783c7eea4a3a8a5145948232906&q=Ozersk`);
+      const weather = response.data;
+      setCurrentWeather(weather);
+    }
+
+    getCityWeather();
+  }, []);
+
+  // useEffect(() => {
+  //   const getDaysWeather = async () => {
+  //     const response = await axios.get(
+  //       `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=Ozersk&days=10`
+  //     );
+  //     setDaysWeather(response.data);
+  //   }
+  //   getDaysWeather();
+  // }, []);
+
   return (
     <div className="App">
       <CityChoiceComponent />
       <div className="main_weather_info">
-        <DayWeatherComponent />
-        <OtherCitiesWeatherComponent />
+        <DayWeatherComponent weather={currentWeather}/>
       </div>
       <MinDayWeatherListComponent />
       <MoreDayWeatherListComponent />
