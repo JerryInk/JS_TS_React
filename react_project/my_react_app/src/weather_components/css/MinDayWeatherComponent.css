@@ -7,7 +7,6 @@
     position: relative;
 
     flex-direction: column;
-    flex: auto;
     flex-wrap: wrap;
 
     height: 180px;
@@ -30,16 +29,36 @@
 
 .min_day_weather_item_weekday {
     display: block;
+
+    font-size: 20px;
+
+    margin: 10px 10px 2px;
 }
 
 .min_day_weather_item_date {
     display: block;
+
+    color: #999;
+
+    margin: 2px 10px 10px;
+}
+
+.min_day_weather_item_icon > img {
+    height: 50px;
 }
 
 .min_day_weather_item_max_temp {
     display: block;
+
+    font-size: 26px;
+
+    margin: 2px;
 }
 
 .min_day_weather_item_min_temp {
     display: block;
+
+    color: #666;
+
+    margin: 2px;
 }

@@ -3,13 +3,12 @@ import MinDayWeatherComponent from './MinDayWeatherComponent';
 import './css/MinDayWeatherListComponent.css';
 
 // Компонент для списка минимальной информации о погоде на несколько дней
-const MinDayWeatherListComponent = () => (
+const MinDayWeatherListComponent = (props) => (
     <div className={'min_day_weather_list'}>
         <ul className={'min_day_weather_ul'}>
-            <MinDayWeatherComponent />
-            <MinDayWeatherComponent />
-            <MinDayWeatherComponent />
-            <MinDayWeatherComponent />
+            {props.daysWeather && props.daysWeather.map((item) =>
+                <MinDayWeatherComponent { ...item }/>
+            )}
         </ul>
     </div>
 );

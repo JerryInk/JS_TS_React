@@ -5,7 +5,7 @@ import './css/CityChoiceComponent.css';
 const CityChoiceComponent = () => (
     <div className={'city_choice_header'}>
       <form className={'city_search_form'} role="search">
-        <input className={'city_search_form_input'} type="search" placeholder="Укажите город..."></input>
+        <input className={'city_search_form_input'} type="search" placeholder="Type city..."></input>
       </form>
     </div>
 );
