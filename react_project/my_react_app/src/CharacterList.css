@@ -1,5 +1,7 @@
 .character_list {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: 5px 20px;
     overflow: hidden;
 }

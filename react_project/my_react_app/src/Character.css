@@ -1,16 +1,36 @@
 .charcter_item {
-    display: block;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
     margin: 15px 0;
+    font-size: 18px;
+    box-shadow: 0px 0px 15px lightgray;
+    border-radius: 5px;
+    padding: 20px;
+    align-items: center;
+    width: 400px;
 }
 
 .character_item_name {
     display: block;
+    margin-right: 20px;
 }
 
 .character_item_status {
     display: block;
+    margin: 0 20px;
+}
+
+.character_item_status > img {
+    height: 50px;
 }
 
 .character_item_species {
     display: block;
+    margin-left: 20px;
+}
+
+.character_item_species > img {
+    height: 50px;
 }

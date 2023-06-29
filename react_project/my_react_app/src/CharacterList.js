@@ -6,7 +6,7 @@ import './CharacterList.css';
 const CharacterList = (props) => (
     <div className={'character_list'}>
         <ul className={'character_ul'}>
-            {props.items && props.items.map((item, index) =>
+            {props.items && props.items.map((item) =>
                 <Character { ...item }/>
             )}
         </ul>

@@ -5,7 +5,15 @@ import './InputComponent.css';
 const InputComponent = () => (
     <div className={'character_search'}>
       <form className={'character_search_form'}>
-        <input className={'character_search_form_input'} type="search" placeholder="..."></input>
+        <input 
+          className={'character_search_form_input'} 
+          type="search" 
+          placeholder="..."
+          onChange={(event) => {
+            console.log(event.target.value)
+          }}>
+
+        </input>
       </form>
     </div>
 );
