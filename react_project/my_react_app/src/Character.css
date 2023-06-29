@@ -12,6 +12,10 @@
     width: 400px;
 }
 
+.character_item_width {
+    width: 100px;
+}
+
 .character_item_name {
     display: block;
     margin-right: 20px;
