@@ -43,3 +43,9 @@
 .character_item_species > img {
     height: 50px;
 }
+
+.character_link > a {
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+}
