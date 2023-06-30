@@ -12,3 +12,12 @@
 .character_search_form_input:hover {
     border: 1px solid #aaa;
 }
+
+.character_search_form_submit {
+    padding: 10px 20px;
+    border: 1px solid #fff;
+}
+
+.character_search_form_submit:hover {
+    border: 1px solid #aaa;
+}
