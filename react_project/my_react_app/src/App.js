@@ -8,8 +8,8 @@ import axios from 'axios';
 
 const apiKey = '2ee9783c7eea4a3a8a5145948232906';
 
-const getDaysWeather = async () => {
-  const response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=Ozersk&days=10`);
+const getDaysWeather = async (city) => {
+  const response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=10`);
   const days = response.data.forecast.forecastday.map((item, index) => {
     return {
       key: index,
@@ -22,37 +22,42 @@ const getDaysWeather = async () => {
   return days;
 };
 
-const getCurrentWeather = async () => {
-  const response = await axios.get(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=Ozersk`);
+const getCurrentWeather = async (city) => {
+  const response = await axios.get(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`);
   const currDay = [{ key: 0, weather: response.data }];
   return currDay;
 };
 
 const App = () => {
-  //const [city, setCity] = useState('');
+  const [city, setCity] = useState('Ozersk');
   const [currentWeather, setCurrentWeather] = useState([]);
   const [daysWeather, setDaysWeather] = useState([]);
 
-  
-  useEffect(() => {
-    const getCityWeather = async () => {
-      const day = await getCurrentWeather();
-      setCurrentWeather(day);
-    }
-    getCityWeather();
-  }, []);
+  const handleSubmit = (event) => {
+    const newCity = event.target.city_input.value;
+    setCity(newCity);
+    event.preventDefault();
+  }
 
   useEffect(() => {
-    const getDays = async () => {
-      const days = await getDaysWeather();
+    const getCityWeather = async (city) => {
+      const day = await getCurrentWeather(city);
+      setCurrentWeather(day);
+    }
+    getCityWeather(city);
+  }, [city]);
+
+  useEffect(() => {
+    const getDays = async (city) => {
+      const days = await getDaysWeather(city);
       setDaysWeather(days);
     }
-    getDays();
-  }, []);
+    getDays(city);
+  }, [city]);
 
   return (
     <div className="App">
-      <CityChoiceComponent />
+      <CityChoiceComponent onSubmit={handleSubmit}/>
       <div className="main_weather_info">
         <DayWeatherComponent dayWeather={currentWeather}/>
       </div>

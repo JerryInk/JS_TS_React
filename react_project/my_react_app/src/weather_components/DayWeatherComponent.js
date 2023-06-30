@@ -3,9 +3,9 @@ import './css/DayWeatherComponent.css';
 
 // Компонент для основной информации о погоде на день
 const DayWeatherComponent = (props) => (
-    <div className={'day_weather'}>
+    <div className={'day_weather_wrapper'}>
         {props.dayWeather && props.dayWeather.map((item) =>
-        <>
+        <div className={'day_weather'}>
             <div className={'day_weather_header'}>
                 {item.weather.location.name}
             </div>
@@ -24,7 +24,7 @@ const DayWeatherComponent = (props) => (
             <div className={'day_weather_additional'}>
                 Weather conditions: {item.weather.current.condition.text}
             </div>
-        </>
+        </div>
         )}
     </div>
 );
