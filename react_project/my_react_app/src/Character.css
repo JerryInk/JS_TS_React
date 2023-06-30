@@ -9,11 +9,16 @@
     border-radius: 5px;
     padding: 20px;
     align-items: center;
-    width: 400px;
+    width: 600px;
 }
 
 .character_item_width {
     width: 100px;
+}
+
+.character_item_avatar > img {
+    width: 100px;
+    border-radius: 5px;
 }
 
 .character_item_name {

@@ -2,8 +2,11 @@ import React from 'react';
 import './Character.css';
 
 
-const Character = ({name, status, species}) => (
+const Character = ({name, status, species, avatar}) => (
     <div className={'charcter_item'}>
+        <div className={'character_item_avatar character_item_width'}>
+        <img src={avatar} alt="Avatar"></img>
+        </div>
         <div className={'character_item_name character_item_width'}>{name}</div>
         <div className={'character_item_status character_item_width'}>
             { status === 'Alive' && <img src="/heartbeat.png" alt="Alive"></img> }

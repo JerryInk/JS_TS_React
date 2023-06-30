@@ -24,6 +24,7 @@ const App = () => {
             name: item.name,
             status: item.status,
             species: item.species,
+            avatar: item.image,
           }
         });
         setCharacters(items);
