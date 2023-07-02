@@ -1,0 +1,64 @@
+.min_day_weather_li {
+    display: block;
+}
+
+.min_day_weather_item {
+    display: flex;
+    position: relative;
+
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    height: 180px;
+    width: 100px;
+
+    font-size: 14px;
+    color: black;
+    font-family: Helvetica, sans-serif;
+
+
+    padding: 10px;
+    margin: 5px 10px;
+
+    border-radius: 6px;
+}
+
+.min_day_weather_item:hover {
+    box-shadow: 0px 0px 15px lightgray;
+}
+
+.min_day_weather_item_weekday {
+    display: block;
+
+    font-size: 20px;
+
+    margin: 10px 10px 2px;
+}
+
+.min_day_weather_item_date {
+    display: block;
+
+    color: #999;
+
+    margin: 2px 10px 10px;
+}
+
+.min_day_weather_item_icon > img {
+    height: 50px;
+}
+
+.min_day_weather_item_max_temp {
+    display: block;
+
+    font-size: 26px;
+
+    margin: 2px;
+}
+
+.min_day_weather_item_min_temp {
+    display: block;
+
+    color: #666;
+
+    margin: 2px;
+}

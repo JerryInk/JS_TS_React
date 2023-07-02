@@ -1,0 +1,10 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+
+.main_weather_info {
+  display: flex;
+  flex-direction: row;
+}

@@ -1,0 +1,66 @@
+.day_weather {
+    display: flex;
+    position: relative;
+
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+
+    height: 200px;
+    width: 400px;
+
+    font-size: 14px;
+    color: black;
+    font-family: Helvetica, sans-serif;
+
+    padding: 20px;
+    margin: 20px;
+    
+    box-shadow: 0px 0px 15px lightgray;
+    border-radius: 6px;
+}
+
+.day_weather_header {
+    display: block;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.day_weather_updated {
+    display: block;
+    margin-top: -15px;
+    margin-left: 10px;
+
+    color: #999;
+    font-size: 12px;
+}
+
+.day_weather_main {
+    display: block;
+    font-size: 54px;
+    margin-bottom: 15px;
+}
+
+.day_weather_feels {
+    display: block;
+    margin-top: -15px;
+    margin-left: 10px;
+
+    color: #999;
+    font-size: 12px;
+}
+
+.day_weather_icon > img {
+    height: 75px;
+}
+
+.day_weather_additional {
+    display: block;
+    position: absolute;
+
+    color: #666;
+
+    bottom: 5px;
+
+    margin-bottom: 15px;
+}
