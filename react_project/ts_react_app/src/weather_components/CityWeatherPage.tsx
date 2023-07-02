@@ -1,16 +1,18 @@
 import DayWeatherComponent from './DayWeatherComponent';
 import MinDayWeatherListComponent from './MinDayWeatherListComponent';
 
+import WeatherInterface from './WeatherInterface';
+
 import React from 'react';
 import axios from 'axios';
-import { useLoaderData } from 'react-router-dom';
+import { LoaderFunctionArgs, useLoaderData } from 'react-router-dom';
 
 const apiKey = '2ee9783c7eea4a3a8a5145948232906';
 
 
-const getDaysWeather = async (city) => {
+const getDaysWeather = async (city: string | undefined) => {
   const response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=10`);
-  const days = response.data.forecast.forecastday.map((item, index) => {
+  const days = response.data.forecast.forecastday.map((item: WeatherInterface, index: number) => {
     return {
       key: index,
       date: item.date,
@@ -22,13 +24,13 @@ const getDaysWeather = async (city) => {
   return days;
 };
 
-const getCurrentWeather = async (city) => {
+const getCurrentWeather = async (city: string | undefined) => {
   const response = await axios.get(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`);
   const currDay = [{ key: 0, weather: response.data }];
   return currDay;
 };
 
-const loader = async({ params }) => {
+const loader = async ({ params }: LoaderFunctionArgs) => {
     const currentWeather = await getCurrentWeather(params.city);
     const daysWeather = await getDaysWeather(params.city);
     return { currentWeather, daysWeather };

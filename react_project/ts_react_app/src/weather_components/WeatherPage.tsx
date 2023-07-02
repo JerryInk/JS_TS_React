@@ -2,15 +2,17 @@ import DayWeatherComponent from './DayWeatherComponent';
 import MinDayWeatherListComponent from './MinDayWeatherListComponent';
 import CityChoiceComponent from './CityChoiceComponent';
 
+import WeatherInterface from './WeatherInterface';
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const apiKey = '2ee9783c7eea4a3a8a5145948232906';
 
 
-const getDaysWeather = async (city) => {
+const getDaysWeather = async (city: string) => {
   const response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=10`);
-  const days = response.data.forecast.forecastday.map((item, index) => {
+  const days = response.data.forecast.forecastday.map((item: WeatherInterface, index: number) => {
     return {
       key: index,
       date: item.date,
@@ -22,25 +24,26 @@ const getDaysWeather = async (city) => {
   return days;
 };
 
-const getCurrentWeather = async (city) => {
+const getCurrentWeather = async (city: string) => {
   const response = await axios.get(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`);
-  const currDay = [{ key: 0, weather: response.data }];
+  const currDay = [{ weather: response.data }];
   return currDay;
 };
 
 const WeatherPage = () => {
   const [city, setCity] = useState('Ozersk');
-  const [currentWeather, setCurrentWeather] = useState([]);
+  const [currentWeather, setCurrentWeather] = useState([{}]);
   const [daysWeather, setDaysWeather] = useState([]);
 
-  const handleSubmit = (event) => {
-    const newCity = event.target.city_input.value;
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    const target = event.currentTarget;
+    const newCity = target.city_input.value;
     setCity(newCity);
     event.preventDefault();
   }
 
   useEffect(() => {
-    const getCityWeather = async (city) => {
+    const getCityWeather = async (city: string) => {
       const day = await getCurrentWeather(city);
       setCurrentWeather(day);
     }
@@ -48,7 +51,7 @@ const WeatherPage = () => {
   }, [city]);
 
   useEffect(() => {
-    const getDays = async (city) => {
+    const getDays = async (city: string) => {
       const days = await getDaysWeather(city);
       setDaysWeather(days);
     }
