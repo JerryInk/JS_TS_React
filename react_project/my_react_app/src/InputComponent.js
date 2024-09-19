@@ -6,15 +6,15 @@ const InputComponent = ({onSubmit}) => {
   return (
     <div className={'character_search'}>
       <form className={'character_search_form'} onSubmit={onSubmit}>
-        <input 
+        <input
           id="character_name_search"
-          className={'character_search_form_input'} 
-          type="search" 
+          className={'character_search_form_input'}
+          type="search"
           placeholder="Поиск персонажей...">
         </input>
-        <input 
-          className={'character_search_form_submit'} 
-          type="submit" 
+        <input
+          className={'character_search_form_submit'}
+          type="submit"
           value="Найти">
         </input>
       </form>

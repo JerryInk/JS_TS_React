@@ -19,7 +19,7 @@ const CharacterPage = () => {
 
     return (
         <div className='wrapper'>
-        {character && character.map((item) => 
+        {character && character.map((item) =>
             <div className={'character_card'}>
                 <div className='character_card_avatar_wrapper'>
                     <div className={'character_card_avatar'}>
@@ -32,12 +32,12 @@ const CharacterPage = () => {
                     <div className={'character_card_gender'}>Gender: {item.character.gender}</div>
                     <div className={'character_card_location'}>Location: {item.character.location.name}</div>
                     <div className={'character_card_origin'}>Origin: {item.character.origin.name}</div>
-                    <div className={'character_card_status'}> <p>Status:</p> 
+                    <div className={'character_card_status'}> <p>Status:</p>
                         { item.character.status === 'Alive' && <img src="/heartbeat.png" alt="Alive"></img> }
                         { item.character.status === 'Dead' && <img src="/danger.png" alt="Dead"></img> }
                         { item.character.status === 'unknown' && <img src="/person.png" alt="unknown"></img> }
                     </div>
-                    <div className={'character_card_species'}> Species: 
+                    <div className={'character_card_species'}> Species:
                         { item.character.species === 'Alien' && <img src="/alien.png" alt="Alien"></img> }
                         { item.character.species === 'Human' && <img src="/human.png" alt="Human"></img> }
                     </div>

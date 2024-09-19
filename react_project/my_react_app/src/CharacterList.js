@@ -1,5 +1,5 @@
 import React from 'react';
-import Character from './Character';
+import CharacterItem from './CharacterItem';
 import './CharacterList.css';
 
 // Компонент для списка минимальной информации о погоде на несколько дней
@@ -7,7 +7,7 @@ const CharacterList = (props) => (
     <div className={'character_list'}>
         <ul className={'character_ul'}>
             {props.items && props.items.map((item) =>
-                <Character { ...item }/>
+                <CharacterItem key={item.id} { ...item }/>
             )}
         </ul>
     </div>

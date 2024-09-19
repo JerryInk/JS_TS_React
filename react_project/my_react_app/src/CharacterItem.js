@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import './Character.css';
+import './CharacterItem.css';
 
 
-const Character = ({id, name, status, species, avatar}) => (
-    <div className={'charcter_item'}>
+const CharacterItem = ({id, name, status, species, avatar}) => (
+    <li className={'charcter_item'}>
         <div className={'character_item_avatar character_item_width'}>
             <img src={avatar} alt="Avatar"></img>
         </div>
@@ -21,7 +21,7 @@ const Character = ({id, name, status, species, avatar}) => (
         <div className='character_link character_item_width'>
             <Link to={`${id}`} target='_blank' rel='noopener noreferrer'>...</Link>
         </div>
-    </div>
+    </li>
 );
 
-export default Character;
+export default CharacterItem;
